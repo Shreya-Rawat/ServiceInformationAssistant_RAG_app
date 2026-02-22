@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+streamlit
+pymupdf
+python-docx
+faiss-cpu
+langchain-ollama
+langchain-huggingface
+langgraph
+langchain_text_splitters
+langchain_community
+python-multipart
+sentence-transformers

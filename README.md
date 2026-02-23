@@ -1,11 +1,11 @@
 # ServiceInformationAssistant_RAG_app
 A RAG based LLM application to let users upload docs related to company services and solutions and query information on those docs.
 
-📘 Service Information Assistant
+## 📘 Service Information Assistant
 
 A Retrieval-Augmented Generation (RAG) Based AI Assistant
 
-1️⃣ Overview
+## 1️⃣ Overview
 
 This project implements a Service Information Assistant for a technology services company using a Retrieval-Augmented Generation (RAG) architecture with basic agentic behavior.
 
@@ -27,7 +27,7 @@ Provides source citations for transparency
 
 Exposes a FastAPI backend and Streamlit UI
 
-2️⃣ Problem Statement
+## 2️⃣ Problem Statement
 
 The assistant simulates a Service Information AI for a tech services company. It can answer questions such as:
 
@@ -39,8 +39,8 @@ The assistant simulates a Service Information AI for a tech services company. It
 
 The system retrieves relevant document sections and generates context-aware responses grounded strictly in uploaded documents.
 
-3️⃣ Core Requirements Implementation
-3.1 Data Preparation & Document Ingestion
+## 3️⃣ Core Requirements Implementation
+### 3.1 Data Preparation & Document Ingestion
 
 ✔ Supports:
 
@@ -74,7 +74,7 @@ chunk_id
 
 ✔ Scalable architecture — can handle real production documents.
 
-3.2 RAG Pipeline Implementation
+### 3.2 RAG Pipeline Implementation
 
 The system implements a complete RAG pipeline:
 
@@ -124,7 +124,7 @@ Para: <retrieved content>
 
 Ensuring transparency and trust.
 
-3.3 Agentic Behaviour (Tool Integration)
+### 3.3 Agentic Behaviour (Tool Integration)
 
 This implementation includes:
 
@@ -171,7 +171,7 @@ Cost information not found in document.
 
 This demonstrates agentic orchestration logic.
 
-3.4 User Interface
+### 3.4 User Interface
 ✅ Option A — REST API (FastAPI)
 /upload
 
@@ -220,7 +220,7 @@ Run with:
 
 streamlit run app.py
 
-4️⃣ Technical Architecture
+## 4️⃣ Technical Architecture
 🔹 Architecture Flow
 User → Streamlit UI → FastAPI → Ingestion → Embeddings → FAISS
                                               ↓
@@ -238,7 +238,7 @@ Graph:
 
 START → retrieve → generate → END
 
-5️⃣ Tech Stack
+## 5️⃣ Tech Stack
 Language
 
 Python 3.8+
@@ -271,7 +271,7 @@ PyMuPDF (fitz)
 
 python-docx
 
-6️⃣ Project Structure
+## 6️⃣ Project Structure
 ├── agent.py           # RAG + agent orchestration logic
 ├── api.py             # FastAPI backend
 ├── app.py             # Streamlit frontend
@@ -282,19 +282,19 @@ python-docx
 ├── requirements.txt
 └── README.md
 
-7️⃣ Setup Instructions
-1️⃣ Clone Repository
+## 7️⃣ Setup Instructions
+### 1️⃣ Clone Repository
 git clone <your-repo-url>
 cd <repo-name>
 
-2️⃣ Create Virtual Environment
+### 2️⃣ Create Virtual Environment
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-4️⃣ Install & Run Ollama
+### 4️⃣ Install & Run Ollama
 
 Install Ollama from:
 https://ollama.com
@@ -308,7 +308,7 @@ Run Ollama:
 
 ollama serve
 
-5️⃣ Start FastAPI Server
+### 5️⃣ Start FastAPI Server
 uvicorn api:app --reload
 
 
@@ -316,10 +316,10 @@ Server runs at:
 
 http://localhost:8000
 
-6️⃣ Run Streamlit App
+### 6️⃣ Run Streamlit App
 streamlit run app.py
 
-8️⃣ Key Design Decisions
+### 8️⃣ Key Design Decisions
 
 ✔ Strict context grounding to prevent hallucinations
 ✔ LLM-based intent detection for agentic behavior
@@ -328,7 +328,7 @@ streamlit run app.py
 ✔ CORS enabled for frontend-backend integration
 ✔ Clear separation of ingestion, embedding, retrieval, generation
 
-9️⃣ Error Handling & Validation
+### 9️⃣ Error Handling & Validation
 
 Validates empty document upload
 
@@ -338,7 +338,7 @@ Handles unsupported file formats
 
 Structured JSON parsing for intent classification
 
-🔟 Future Improvements
+### 🔟 Future Improvements
 
 Add multiple document ingestion
 
@@ -354,7 +354,7 @@ Docker containerization
 
 Replace local LLM with production-grade hosted LLM
 
-🎯 Conclusion
+## 🎯 Conclusion
 
 This project demonstrates:
 

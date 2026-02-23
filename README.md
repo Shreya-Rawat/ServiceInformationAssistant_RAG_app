@@ -106,13 +106,7 @@ Metadata extraction for citation generation
 
 LLM: llama3.2:1b (via Ollama)
 
-Strict grounding prompt:
-
-No hallucinations
-
-Answer only from retrieved context
-
-Preserve original terminology
+Strict grounding prompt:  ( No hallucinations, Answer only from retrieved context, Preserve original terminology )
 
 🔹 Source Citations
 
@@ -128,7 +122,7 @@ Ensuring transparency and trust.
 
 This implementation includes:
 
-🧠 Pricing Estimation Agent
+#### 🧠 Pricing Estimation Agent
 
 The assistant autonomously detects cost-related queries.
 
@@ -221,29 +215,24 @@ Run with:
 streamlit run app.py
 
 ## 4️⃣ Technical Architecture
-🔹 Architecture Flow
+🔹 Architecture Flow:
+
 User → Streamlit UI → FastAPI → Ingestion → Embeddings → FAISS
                                               ↓
 User Query → LangGraph StateGraph → Retrieve → Generate → Response
 
 🔹 Agent Workflow (LangGraph)
 
-Nodes:
-
-retrieve
-
-generate
+Nodes:  ( retrieve, generate )
 
 Graph:
 
 START → retrieve → generate → END
 
 ## 5️⃣ Tech Stack
-Language
+Language:  ( Python 3.8+ )
 
-Python 3.8+
-
-Core Libraries
+Core Libraries:  
 
 LangChain
 
@@ -265,7 +254,7 @@ Frontend
 
 Streamlit
 
-Document Processing
+Document Processing :
 
 PyMuPDF (fitz)
 
@@ -318,6 +307,33 @@ http://localhost:8000
 
 ### 6️⃣ Run Streamlit App
 streamlit run app.py
+
+### 7️⃣ Query the Assistant
+
+Once both FastAPI and Streamlit are running:
+
+🔹 Option A — Using Streamlit UI
+
+The streamlit command will open your browser:
+
+http://localhost:8501
+
+
+Upload a PDF or DOCX file.
+
+Enter your question.
+
+Click Ask.
+
+You will see:
+
+✅ Generated Answer
+
+📌 Source Citation
+
+🧠 Cost Estimation Analysis (if applicable)
+
+** The Response will also include an answer and reasoning about weather your query is related to any cost estimation.
 
 ### 8️⃣ Key Design Decisions
 

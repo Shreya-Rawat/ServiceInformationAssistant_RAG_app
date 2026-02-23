@@ -104,8 +104,7 @@ Metadata extraction for citation generation
 
 🔹 Generation
 
-LLM: llama3.2:1b (via Ollama)
-** (Use qwen2.5:7b if possible for better response)
+LLM: qwen2:7b (via Ollama)
 
 Strict grounding prompt:  ( No hallucinations, Answer only from retrieved context, Preserve original terminology )
 
@@ -300,9 +299,7 @@ https://ollama.com
 
 Pull the model:
 
-ollama pull llama3.2:1b
-
-*** (Use model qwen2.5:7b if possible for better response (also update the model name in the config.py))
+ollama pull qwen2:7b
 
 ### 5️⃣ Start FastAPI Server
 uvicorn api:app --reload

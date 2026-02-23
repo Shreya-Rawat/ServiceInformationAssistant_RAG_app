@@ -261,8 +261,11 @@ PyMuPDF (fitz)
 python-docx
 
 ## 6️⃣ Project Structure
+
 ├── agent.py           # RAG + agent orchestration logic
+
 ├── api.py             # FastAPI backend
+
 ├── app.py             # Streamlit frontend
 ├── config.py          # Model & API configuration
 ├── embeddings.py      # Embedding & FAISS logic

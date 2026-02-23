@@ -267,11 +267,17 @@ python-docx
 ├── api.py             # FastAPI backend
 
 ├── app.py             # Streamlit frontend
+
 ├── config.py          # Model & API configuration
+
 ├── embeddings.py      # Embedding & FAISS logic
+
 ├── ingestion.py       # Document extraction logic
+
 ├── faiss_index/       # Persisted vector store
+
 ├── requirements.txt
+
 └── README.md
 
 ## 7️⃣ Setup Instructions

@@ -16,7 +16,7 @@ try:
         post_data_response = re.post(upload_file_url+'/upload', files = upload_file)
         st.success(post_data_response.json()["status"])
 except Exception as e:
-    raise HTTPException(status_code=400, detail=str(e))
+    raise HTTPException(status_code=500, detail=str(e))
 
 
 query = st.text_input("Ask a question about your document:")
@@ -32,5 +32,6 @@ if st.button("Ask") and query:
         st.write(answer)
         st.info(f"**Source:** {citation}")
         
+
 
 

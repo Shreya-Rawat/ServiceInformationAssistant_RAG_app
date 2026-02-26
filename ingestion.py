@@ -10,7 +10,7 @@ text = None
 def extract_text(file: UploadFile) -> str:
     suffix = file.filename.split(".")[-1].lower()
     # Use delete=False for Windows compatibility in some Python versions
-    with tempfile.NamedTemporaryFile(delete=False, suffix=f".{suffix}") as tmp:
+    with tempfile.NamedTemporaryFile(delete=True, suffix=f".{suffix}") as tmp:
         tmp.write(file.file.read())
         tmp_path = tmp.name
     
@@ -32,4 +32,5 @@ def extract_text(file: UploadFile) -> str:
 def get_context() -> str:
     if text.strip():
         return text
+
     return False
